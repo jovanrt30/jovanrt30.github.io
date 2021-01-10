@@ -1,0 +1,12 @@
+body{
+    display: flex;
+	background-color: white;
+    min-height: 96vh;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
