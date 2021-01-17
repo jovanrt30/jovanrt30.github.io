@@ -8,13 +8,24 @@
     </head>
     <body>
         <div class="home">
-            <div class="home-title">
-                {{ message }}
+            <div id="button">
+                <button class="button" v-on:click="show = !show" v-if="show">
+                  Click me!
+                </button>
             </div>
-            <div class="home-subtitle">
-                {{ message }}
-            </div>
+            <transition name="fade">
+                <div class="title" v-if="!show">
+                    <div>
+                        {{ title }}
+                    </div>
+                    <div>
+                        {{ subtitle }}
+                    </div>
+                </div>
+            </transition>
         </div>
+            
+
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="./script.js"></script>
     </body>
